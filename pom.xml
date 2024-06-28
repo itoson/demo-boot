@@ -14,13 +14,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!--Spring Boot Starter 父工程-->
+    <!-- Spring Boot Starter -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.4.2</version>
         <relativePath/>
-        <!-- MAVEN构建jar包时候查找顺序：relativePath元素中的地址>本地仓库>远程仓库 -->
     </parent>
 
     <dependencies>
@@ -86,6 +85,13 @@
             <version>1.2.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>jp.ne.paypay</groupId>
+            <artifactId>paypayopa</artifactId>
+            <version>1.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -93,7 +99,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.4.2</version> <!-- 使用适合的 SpringBoot 版本的插件版本 -->
+                <version>2.4.2</version>
                 <executions>
                     <execution>
                         <goals>
